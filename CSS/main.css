@@ -1,0 +1,134 @@
+.latest_posts {
+    background-color: white;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat (auto-fit, minmax(120px, 1fr));
+    grid-gap: 2.5em;
+    grid-template-areas: 
+    "one"
+    "two" 
+    "three"
+    "four"
+    "five"
+    "six";
+}
+
+#one {
+    grid-area: one;   
+}
+
+#two {
+    grid-area: two;   
+}
+
+#three {
+    grid-area: three;   
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;   
+}
+
+#six {
+    grid-area: six;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+
+.card_image {
+    display: block;
+    box-sizing: inherit;
+    width: 100%;
+}
+
+.card_title {
+    padding: 1rem 1rem 0 1rem;
+    display: block;
+    box-sizing: inherit;
+    background-color: white;
+}
+
+.card_title:hover {
+    color: #e6e0cf;
+}
+
+.card_content {
+    padding: 1rem 1rem 1rem 1rem;
+    display: block;
+    box-sizing: inherit;
+    background-color: white;
+    color: #debfb5;
+}
+
+.btn {
+    border: 0px;
+    margin: 2em;
+    transition: 0.5s;
+    float: none;
+    padding: 1em;
+    background-color: #baa6a5;
+}
+
+.btn a {
+    background-color:#baa6a5;
+    cursor: pointer;
+}
+
+.btn a:hover {
+    color:#e6e0cf;
+    cursor: pointer;
+}
+
+h2 {
+    color: #baa6a5;
+    font-size: 24px;
+}
+
+h3 {
+    color: #debfb5;
+    font-size: 20px;
+}
+
+@media (min-width: 800px) {
+    .latest_posts {
+        display: grid;
+        grid-template-columns: auto-fit, minmax(120px, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 2em;
+        padding: 4em 2em 2em 2em;
+        grid-template-areas: 
+        "one two"
+        "three four"
+        "five six";
+        align-content: space-around;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1080px) {
+    .latest_posts {
+        display: grid;
+        grid-template-columns: auto-fit, minmax(120px, 1fr);
+        grid-template-rows: auto;
+        grid-gap: 2em;
+        padding: 4em 2em 2em 2em;
+        grid-template-areas: 
+        "one two three"
+        "four five six";
+        align-content: space-around;
+        justify-content: space-between;
+    }
+}
+
